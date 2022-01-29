@@ -15,12 +15,13 @@ class ApiController extends AbstractController
     {
         $this->itemService = $itemService;
     }
+    
     /**
      * @Route("/api/v1/test", name="test")
      */
     public function test(): Response
     {
-        $this->itemService->getAvailableItems();
-        return $this->json(['status' => 'ok'], 200);
+        $results = $this->itemService->getItems(); 
+        return $this->json($results['content'], 200);
     }
 }
