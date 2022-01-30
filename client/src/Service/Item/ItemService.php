@@ -13,47 +13,47 @@ class ItemService
         $this->client = Client::getInstance();
     }
 
-    public function getAvailableItems()
+    public function getAvailableItems(): Array
     {
         return $this->client->makeCall('/item/getAvailableItems', 'GET');
     }
 
-    public function getUnavailableItems()
+    public function getUnavailableItems(): Array
     {
         return $this->client->makeCall('/item/getUnavailableItems', 'GET');
     }
 
-    public function getItemsWithGTAmount(Int $amount = 5)
+    public function getItemsWithGTAmount(Int $amount = 5): Array
     {
         return $this->client->makeCall('/item/getItemsWithGTAmount?amount='.$amount, 'GET');
     }
 
-    public function getItems()
+    public function getItems(): Array
     {
         return $this->client->makeCall('/item/Items', 'GET');
     }
 
-    public function getItem(Int $id)
+    public function getItem(Int $id): Array
     {
         return $this->client->makeCall('/item/Items/'.$id, 'GET');
     }
 
-    public function postItem(String $item)
+    public function postItem(String $item): Array
     {
         return $this->client->makeCall('/item/Items', 'POST', $item);
     }
 
-    public function putItem(String $item, Int $id)
+    public function putItem(String $item, Int $id): Array
     {
         return $this->client->makeCall('/item/Items/'.$id, 'PUT', $item);
     }
 
-    public function patchItem(String $item, Int $id)
+    public function patchItem(String $item, Int $id): Array
     {
         return $this->client->makeCall('/item/Items/'.$id, 'PATCH', $item);
     }
 
-    public function deleteItem(Int $id)
+    public function deleteItem(Int $id): Array
     {
         return $this->client->makeCall('/item/Items/'.$id, 'DELETE');
     }

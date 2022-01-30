@@ -3,8 +3,6 @@
 namespace App\Integration\Server;
 
 use App\Utils\Curl;
-use Exception;
-use Symfony\Component\HttpFoundation\Request;
 
 class Client
 {
