@@ -55,7 +55,7 @@ This project contains 2 separate applications. One is called **server**. The sec
 * _int_ Amount
 
 ## Architecture looks like this
-![architecture.png](https://github.com/Nergosu36/symfony-rest-api/blob/master/architecture.png?raw=true)
+![architecture.png](https://user-images.githubusercontent.com/39529730/151795902-948ef59a-b0a7-447e-b19e-b55442eedf6f.png)
 
 ### Both applications were created with PHP 7.4 and Symfony 5.4.2.
 
