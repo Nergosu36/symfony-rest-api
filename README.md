@@ -17,6 +17,38 @@ This project contains 2 separate applications. One is called **server**. The sec
 * Get Items with amount less or equal than 0
 * Get Items with amount greater than given amount (default 5)
 
+## Endpoints
+### Server
+* **GET** /api/v1/item/getAvailableItems - returns a list of all **Items** with **amount** > 0
+* **GET** /api/v1/item/getUnavailableItems - returns a list of all **Items** with **amount** <= 0
+* **GET** /api/v1/item/getItemsWithGTAmount - returns a list of all **Items** with **amount** > **given_amount** (default 5)
+* **GET** /api/v1/item/Items - returns a list of all **Items**
+* **POST** /api/v1/item/Items - creates a new **Item**
+* **GET** /api/v1/item/Items/{id} - returns an **Item** of specific **id**
+* **PUT** /api/v1/item/Items/{id} - exchanges **Item** of specific **id** with a new one
+* **PATCH** /api/v1/item/Items/{id} - updates an **Item** of specific **id** with a new values
+* **DELETE** /api/v1/item/Items/{id} - removes an **Item** of specific **id**
+
+### Client
+* **GET** /api/v1/getAvailableItems - returns a list of all **Items** with **amount** > 0
+* **GET** /api/v1/getUnavailableItems - returns a list of all **Items** with **amount** <= 0
+* **GET** /api/v1/getItemsWithGTAmount - returns a list of all **Items** with **amount** > **given_amount** (default 5)
+* **GET** /api/v1/getItems - returns a list of all **Items**
+* **POST** /api/v1/postItem - creates a new **Item**
+* **GET** /api/v1/getItem/{id} - returns an **Item** of specific **id**
+* **PUT** /api/v1/putItem/{id} - exchanges **Item** of specific **id** with a new one
+* **PATCH** /api/v1/patchItem/{id} - updates an **Item** of specific **id** with a new values
+* **DELETE** /api/v1/deleteItem/{id} -removes an **Item** of specific **id**
+
+## Payload for POST/PUT/PATCH
+#### _Json format_
+```
+{
+    "name": "Name of item",
+    "amount": 10
+}
+```
+
 ## Item model
 
 * _string_ Name
